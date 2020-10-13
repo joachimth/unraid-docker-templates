@@ -17,6 +17,7 @@
   [b]Webhook Tunnel URL[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
   </Overview>
   <Category>HomeAutomation: Tools:</Category>
+  <Date>2020-10-13</Date>
   <WebUI>http://[IP]:[PORT:5678]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/main/n8n.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/main/img/n8n-icon.png</Icon>
