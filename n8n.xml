@@ -19,8 +19,8 @@
   <Category>HomeAutomation: Tools:</Category>
   <Date>2020-10-13</Date>
   <WebUI>http://[IP]:[PORT:5678]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/main/n8n.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/main/img/n8n-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/master/n8n.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/master/img/n8n-icon.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
