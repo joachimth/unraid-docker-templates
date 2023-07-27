@@ -15,10 +15,7 @@
     
     [b]Config[/b] : Storing n8n config and SQL Lite db for your personal workflows.[br]
     [b]Timezone[/b] : (Optional) Required for scheduling to know what time zone the workflows should be started. See https://momentjs.com/timezone/ to find your timezone string.[br]
-    [b]Webhook Tunnel URL[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
-    [b]Basic Auth[/b]: (true/false) If exposing this to the internet, strongly recommend you enable basic auth.[br]
-    [b]Basic Auth username[/b]: Username for basic auth[br]
-    [b]Basic Auth password[/b]:  Password for basic auth[br]
+    [b]Webhook Tunnel[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
   </Overview>
   <Category>HomeAutomation: Tools:</Category>
   <WebUI>http://[IP]:[PORT:5678]/</WebUI>
@@ -36,10 +33,7 @@
     
     [b]Config[/b] : Storing n8n config and SQL Lite db for your personal workflows.[br]
     [b]Timezone[/b] : (Optional) Required for scheduling to know what time zone the workflows should be started. See https://momentjs.com/timezone/ to find your timezone string.[br]
-    [b]Webhook Tunnel URL[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
-    [b]Basic Auth[/b]: (true/false) If exposing this to the internet, strongly recommend you enable basic auth.[br]
-    [b]Basic Auth username[/b]: Username for basic auth[br]
-    [b]Basic Auth password[/b]:  Password for basic auth[br]
+    [b]Webhook Tunnel[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
   </Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -54,7 +48,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/cache/appdata/n8n</HostDir>
-      <ContainerDir>/root/.n8n</ContainerDir>
+      <ContainerDir>/home/node/.n8n</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -66,31 +60,13 @@
     </Variable>
     <Variable>
       <Value>http://192.168.1.161:5678/</Value>
-      <Name>WEBHOOK_TUNNEL_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>N8N_BASIC_AUTH_ACTIVE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>admin</Value>
-      <Name>N8N_BASIC_AUTH_USER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>N8N_BASIC_AUTH_PASSWORD</Name>
+      <Name>WEBHOOK_TUNNEL</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
   <Config Name="Timezone" Target="GENERIC_TIMEZONE" Default="America/Los_Angeles" Mode="" Description="Required for scheduling to know what time zone the workflows should be started. See  https://momentjs.com/timezone/ to find your timezone string." Type="Variable" Display="always" Required="false" Mask="false">America/Los_Angeles</Config>
-  <Config Name="Config" Target="/root/.n8n" Default="/mnt/cache/appdata/n8n" Mode="rw" Description="Where to save config and SQL Lite Database which holds your workflows." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/n8n</Config>
-  <Config Name="Webhook Tunnel URL" Target="WEBHOOK_TUNNEL_URL" Default="" Mode="" Description="Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.161:5678/</Config>
+  <Config Name="Config" Target="/home/node/.n8n" Default="/mnt/cache/appdata/n8n" Mode="rw" Description="Where to save config and SQL Lite Database which holds your workflows." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/n8n</Config>
+  <Config Name="Webhook Tunnel" Target="WEBHOOK_TUNNEL" Default="" Mode="" Description="Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.161:5678/</Config>
   <Config Name="Port" Target="5678" Default="5678" Mode="tcp" Description="Container Port: 5678" Type="Port" Display="always" Required="true" Mask="false">5678</Config>
-  <Config Name="Basic Auth" Target="N8N_BASIC_AUTH_ACTIVE" Default="true" Mode="" Description="Enable basic authentication" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Basic Auth Username" Target="N8N_BASIC_AUTH_USER" Default="admin" Mode="" Description="If Basic Auth is enabled, must specify username" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
-  <Config Name="Basic Auth Password" Target="N8N_BASIC_AUTH_PASSWORD" Default="" Mode="" Description="If basic Auth is enabled, must specify password" Type="Variable" Display="always" Required="false" Mask="true"/>
 </Container>
