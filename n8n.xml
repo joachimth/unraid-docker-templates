@@ -24,12 +24,12 @@
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <Date>2023-07-26</Date>
+  <Date>2023-08-02</Date>
   <Changes>
   Updated for n8n 1.x compatibility:
 
     - Changed home directory to `/home/node/.n8n`
-    - Renamed webhook tunnel variable to `WEBHOOK_TUNNEL`
+    - Renamed webhook tunnel variable to `WEBHOOK_URL`
     - Dropped basic auth config since it's deprecated in n8n 1.x 
   </Changes>
   <Description>n8n (pronounced n-eight-n) helps you to interconnect every app with an API in the world with each other to share and manipulate its data without a single line of code. It is an easy to use, user-friendly and highly customizable service, which uses an intuitive user interface for you to design your unique workflows very fast. Hosted on your server and not based in the cloud, it keeps your sensible data very secure in your own trusted database.
@@ -65,13 +65,13 @@
     </Variable>
     <Variable>
       <Value>http://192.168.1.161:5678/</Value>
-      <Name>WEBHOOK_TUNNEL</Name>
+      <Name>WEBHOOK_URL</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
   <Config Name="Timezone" Target="GENERIC_TIMEZONE" Default="America/Los_Angeles" Mode="" Description="Required for scheduling to know what time zone the workflows should be started. See  https://momentjs.com/timezone/ to find your timezone string." Type="Variable" Display="always" Required="false" Mask="false">America/Los_Angeles</Config>
   <Config Name="Config" Target="/home/node/.n8n" Default="/mnt/cache/appdata/n8n" Mode="rw" Description="Where to save config and SQL Lite Database which holds your workflows." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/n8n</Config>
-  <Config Name="Webhook Tunnel" Target="WEBHOOK_TUNNEL" Default="" Mode="" Description="Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.161:5678/</Config>
+  <Config Name="Webhook Tunnel" Target="WEBHOOK_URL" Default="" Mode="" Description="Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.161:5678/</Config>
   <Config Name="Port" Target="5678" Default="5678" Mode="tcp" Description="Container Port: 5678" Type="Port" Display="always" Required="true" Mask="false">5678</Config>
 </Container>
