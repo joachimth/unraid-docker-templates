@@ -16,6 +16,8 @@
     [b]Config[/b] : Storing n8n config and SQL Lite db for your personal workflows.[br]
     [b]Timezone[/b] : (Optional) Required for scheduling to know what time zone the workflows should be started. See https://momentjs.com/timezone/ to find your timezone string.[br]
     [b]Webhook Tunnel[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
+    [br]
+    [b]Important:[/b] To avoid `permission denied` errors, you must ensure the user id and group id of that appdata folder to user:group of 1000:1000. Run this command in the terminal `chown 1000:1000 /mnt/cache/appdata/n8n`.
   </Overview>
   <Category>HomeAutomation: Tools:</Category>
   <WebUI>http://[IP]:[PORT:5678]/</WebUI>
@@ -39,6 +41,8 @@
     [b]Config[/b] : Storing n8n config and SQL Lite db for your personal workflows.[br]
     [b]Timezone[/b] : (Optional) Required for scheduling to know what time zone the workflows should be started. See https://momentjs.com/timezone/ to find your timezone string.[br]
     [b]Webhook Tunnel[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
+    [br]
+    [b]Important:[/b] To avoid `permission denied` errors, you must ensure the user id and group id of that appdata folder to user:group of 1000:1000. Run this command in the terminal `chown 1000:1000 /mnt/cache/appdata/n8n`.
   </Description>
   <Networking>
     <Mode>bridge</Mode>
