@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Maintainer>
-  <Icon>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/master/img/avatar.jpg</Icon>
-  <Profile>
-    Creating Docker containers for fun.
-  </Profile>
+  <Icon>https://avatars.githubusercontent.com/u/joachimth</Icon>
+  <n>Joachim Thirsbro</n>
+  <Profile>Passionate developer and radio enthusiast creating efficient Docker solutions for SDR applications. Focused on high-performance containerization and community-driven open source projects.</Profile>
+  <DonateText>Support Development</DonateText>
+  <DonateLink>https://github.com/sponsors/joachimth</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/joachimth/unraid-docker-templates/master/img/donate.png</DonateImg>
 </Maintainer>
